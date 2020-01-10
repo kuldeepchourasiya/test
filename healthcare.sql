@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 09, 2020 at 11:21 AM
+-- Generation Time: Jan 10, 2020 at 06:58 PM
 -- Server version: 5.7.28-0ubuntu0.18.04.4
 -- PHP Version: 7.1.33-1+ubuntu18.04.1+deb.sury.org+1
 
@@ -37,8 +37,8 @@ CREATE TABLE `id_number` (
 --
 
 INSERT INTO `id_number` (`id`, `type`, `real_id`) VALUES
-(1, 'patient_uhid', 21),
-(2, 'rpt_id', 14),
+(1, 'patient_uhid', 22),
+(2, 'rpt_id', 15),
 (3, 'exp_voucher', 1);
 
 -- --------------------------------------------------------
@@ -118,7 +118,8 @@ INSERT INTO `patients` (`pnt_aid`, `pnt_uhid`, `pnt_mobile`, `pnt_name`, `pnt_ge
 (52, '17', 2356874578, 'ashish', 'Male', 56, 'bhopal', 'ashish@gmail.com', 'ACTIVE', '2020-01-06 15:29:07', '2020-01-06 15:29:07'),
 (53, '18', 7845785451, 'Suresh', 'Male', 28, 'Bhopal', 'suresh@gmail.com', 'ACTIVE', '2020-01-06 15:30:06', '2020-01-06 15:30:06'),
 (54, '19', 5874578544, 'Bharti', 'Female', 21, 'shivoy complex E-8, arera  colony  bhopal', 'bharti@gmail.com', 'ACTIVE', '2020-01-07 18:33:58', '2020-01-07 18:33:58'),
-(55, '20', 8457845785, 'rakesh', 'Male', 46, NULL, 'rakesh@gmail.com', 'ACTIVE', '2020-01-08 11:54:05', '2020-01-08 11:54:05');
+(55, '20', 8457845785, 'rakesh', 'Male', 46, NULL, 'rakesh@gmail.com', 'ACTIVE', '2020-01-08 11:54:05', '2020-01-08 11:54:05'),
+(56, '21', 8319, 'dgfdsgffd', 'Female', 25, NULL, NULL, 'ACTIVE', '2020-01-10 16:24:59', '2020-01-10 16:24:59');
 
 -- --------------------------------------------------------
 
@@ -152,14 +153,15 @@ CREATE TABLE `reports` (
 --
 
 INSERT INTO `reports` (`rpt_aid`, `rpt_id`, `rpt_date`, `rpt_pnt_id`, `rpt_pnt_uhid`, `rpt_test_ask`, `rpt_smpl_collect_at`, `rpt_amt`, `rpt_amt_receive`, `rpt_amt_remain`, `rpt_payment_status`, `rpt_tot_dis`, `rpt_ref_by`, `rpt_doc_id`, `rpt_remark`, `rpt_status`, `rpt_cr_date`, `rpt_up_date`) VALUES
-(3, '1', '2020-01-03', '36', '1', NULL, NULL, 1050, 250, 700, NULL, 100, NULL, NULL, NULL, 'BILLING', '2020-01-03 12:36:59', '2020-01-03 00:00:00'),
+(3, '1', '2020-01-03', '36', '1', NULL, NULL, 1050, 900, 750, NULL, 100, NULL, NULL, NULL, 'BILLING', '2020-01-03 12:36:59', '2020-01-03 00:00:00'),
 (5, '3', '2020-01-03', '38', '3', NULL, 'bhopal', 500, 50, 350, NULL, 100, NULL, NULL, NULL, 'SAMPLE TESTING', '2020-01-03 14:45:55', '2020-01-03 14:45:55'),
 (10, '8', '2020-01-06', '50', '15', NULL, 'siddharth path lab mp nagar Bhopal', 1530, 500, 530, NULL, 500, NULL, NULL, 'ddggfdfgfdgsfd', 'BILLING', '2020-01-06 13:04:22', '2020-01-06 13:04:22'),
-(11, '9', '2020-01-06', '51', '16', NULL, NULL, 1010, 260, 550, NULL, 200, NULL, NULL, NULL, 'APPROVAL STAGE', '2020-01-06 14:44:33', '2020-01-06 14:44:33'),
-(12, '10', '2020-01-06', '52', '17', NULL, NULL, 100, 20, 70, NULL, 10, NULL, NULL, NULL, 'ASSINING DOCTOR', '2020-01-06 15:29:07', '2020-01-06 15:29:07'),
-(13, '11', '2020-01-06', '53', '18', NULL, NULL, 1050, 500, 400, NULL, 150, NULL, NULL, NULL, 'REGISTERED', '2020-01-06 15:30:06', '2020-01-06 15:30:06'),
-(14, '12', '2020-01-07', '54', '19', NULL, NULL, 1300, 750, 450, NULL, 100, NULL, NULL, NULL, 'SAMPLE TESTING', '2020-01-07 18:33:58', '2020-01-07 18:33:58'),
-(15, '13', '2020-01-08', '55', '20', NULL, NULL, 150, 40, 100, NULL, 10, NULL, NULL, NULL, 'REGISTERED', '2020-01-08 11:54:05', '2020-01-08 11:54:05');
+(11, '9', '2020-01-06', '51', '16', NULL, NULL, 1010, 5245, 475122, NULL, 200, NULL, NULL, NULL, 'BILLING', '2020-01-06 14:44:33', '2020-01-06 14:44:33'),
+(12, '10', '2020-01-06', '52', '17', NULL, NULL, 100, 20, 70, NULL, 10, NULL, NULL, NULL, 'BILLING', '2020-01-06 15:29:07', '2020-01-06 15:29:07'),
+(13, '11', '2020-01-06', '53', '18', NULL, NULL, 1050, 500, 400, NULL, 150, NULL, NULL, NULL, 'SAMPLE COLLECTING', '2020-01-06 15:30:06', '2020-01-06 15:30:06'),
+(14, '12', '2020-01-07', '54', '19', NULL, NULL, 1300, 750, 450, NULL, 100, NULL, NULL, NULL, 'BILLING', '2020-01-07 18:33:58', '2020-01-07 18:33:58'),
+(15, '13', '2020-01-08', '55', '20', NULL, 'bhopal', 150, 140, 0, NULL, 10, NULL, NULL, NULL, 'APPROVAL STAGE', '2020-01-08 11:54:05', '2020-01-08 11:54:05'),
+(16, '14', '2020-01-10', '56', '21', NULL, NULL, 250, 0, 250, NULL, 0, NULL, NULL, NULL, 'REGISTERED', '2020-01-10 16:24:59', '2020-01-10 16:24:59');
 
 -- --------------------------------------------------------
 
@@ -187,8 +189,8 @@ CREATE TABLE `reports_test` (
 INSERT INTO `reports_test` (`r_test_aid`, `rpt_id`, `r_test_id`, `r_test_under`, `r_test_charge`, `r_test_value`, `r_test_val`, `r_test_remark`, `r_test_cr_date`, `r_test_up_date`) VALUES
 (98, 6, 152, 49, 480, 'ng/ml', '', NULL, '2020-01-03 15:09:41', '2020-01-03 15:09:41'),
 (103, 7, 19, 92, 190, 'mg/dl', '', NULL, '2020-01-03 15:27:24', '2020-01-03 15:27:24'),
-(132, 3, 15, 48, 150, 'ng/ml', '7788', NULL, '2020-01-06 12:24:43', '2020-01-06 12:24:43'),
-(135, 3, 20, 49, 350, 'U/L', '876', NULL, '2020-01-06 13:01:32', '2020-01-06 13:01:32'),
+(132, 3, 15, 48, 150, 'ng/ml', '5.3', NULL, '2020-01-06 12:24:43', '2020-01-06 12:24:43'),
+(135, 3, 20, 49, 350, 'U/L', '2.3', NULL, '2020-01-06 13:01:32', '2020-01-06 13:01:32'),
 (140, 8, 152, 49, 480, 'ng/ml', '1', NULL, '2020-01-06 14:08:33', '2020-01-06 14:08:33'),
 (141, 8, 150, 92, 800, 'ml', '2', NULL, '2020-01-06 14:23:00', '2020-01-06 14:23:00'),
 (142, 8, 16, 92, 250, 'pg/ml', '3', NULL, '2020-01-06 14:25:29', '2020-01-06 14:25:29'),
@@ -198,12 +200,13 @@ INSERT INTO `reports_test` (`r_test_aid`, `rpt_id`, `r_test_id`, `r_test_under`,
 (147, 10, 18, 48, 100, 'ng/ml', '', NULL, '2020-01-06 15:28:56', '2020-01-06 15:28:56'),
 (148, 11, 16, 92, 250, 'pg/ml', '', NULL, '2020-01-06 15:29:55', '2020-01-06 15:29:55'),
 (149, 11, 150, 92, 800, 'ml', '', NULL, '2020-01-06 15:29:56', '2020-01-06 15:29:56'),
-(150, 12, 15, 48, 150, 'ng/ml', '', NULL, '2020-01-07 18:33:36', '2020-01-07 18:33:36'),
-(151, 12, 18, 48, 100, 'ng/ml', '', NULL, '2020-01-07 18:33:36', '2020-01-07 18:33:36'),
-(152, 12, 16, 92, 250, 'pg/ml', '', NULL, '2020-01-07 18:33:39', '2020-01-07 18:33:39'),
-(153, 12, 150, 92, 800, 'ml', '', NULL, '2020-01-07 18:33:40', '2020-01-07 18:33:40'),
-(154, 13, 15, 48, 150, 'ng/ml', '', NULL, '2020-01-08 11:53:56', '2020-01-08 11:53:56'),
-(155, 14, 15, 48, 150, 'ng/ml', NULL, NULL, '2020-01-08 14:19:52', '2020-01-08 14:19:52');
+(150, 12, 15, 48, 150, 'ng/ml', '5.6', 'ff', '2020-01-07 18:33:36', '2020-01-07 18:33:36'),
+(151, 12, 18, 48, 100, 'ng/ml', '2.3', NULL, '2020-01-07 18:33:36', '2020-01-07 18:33:36'),
+(152, 12, 16, 92, 250, 'pg/ml', '6.2', NULL, '2020-01-07 18:33:39', '2020-01-07 18:33:39'),
+(153, 12, 150, 92, 800, 'ml', '4.2', NULL, '2020-01-07 18:33:40', '2020-01-07 18:33:40'),
+(154, 13, 15, 48, 150, 'ng/ml', '5.2', NULL, '2020-01-08 11:53:56', '2020-01-08 11:53:56'),
+(156, 14, 15, 48, 150, 'ng/ml', NULL, NULL, '2020-01-10 16:25:46', '2020-01-10 16:25:46'),
+(157, 14, 18, 48, 100, 'ng/ml', NULL, NULL, '2020-01-10 16:25:46', '2020-01-10 16:25:46');
 
 -- --------------------------------------------------------
 
@@ -429,17 +432,17 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `patients`
 --
 ALTER TABLE `patients`
-  MODIFY `pnt_aid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `pnt_aid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- AUTO_INCREMENT for table `reports`
 --
 ALTER TABLE `reports`
-  MODIFY `rpt_aid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `rpt_aid` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `reports_test`
 --
 ALTER TABLE `reports_test`
-  MODIFY `r_test_aid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
+  MODIFY `r_test_aid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
 --
 -- AUTO_INCREMENT for table `tests`
 --
