@@ -22,7 +22,7 @@
                     <h3 class="box-title">Edit Patient</h3>
                     <div class="pull-right">
                       <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('patient.index') }}"><i class="fa fa-reply"></i></a>
+                        <a class="btn close" href="{{ route('patient.index') }}"><span aria-hidden="true">×</span></a>
                       </div>
                     </div>
                 </div>

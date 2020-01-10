@@ -7,6 +7,7 @@
             <div class="box box-primary" >
                 <div class="box-header with-border text-center">
                     <h1 class="box-title">Report Detail</h1>
+                    <a class="btn close" href="{{ route('assign_doctor.index') }}"><span aria-hidden="true">×</span></a>
                 </div>
                 <div class="box-body" >
                     <div class="row">

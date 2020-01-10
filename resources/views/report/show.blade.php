@@ -7,6 +7,7 @@
             <div class="box box-primary" >
                 <div class="box-header with-border text-center">
                     <h1 class="box-title" style="font-size:25px;">Receipt</h1>
+                    <a href="{{route('report.index')}}" class="btn close"><span aria-hidden="true">×</span></a>
                 </div>
                 <div class="box-body" >
                     <div class="row">
@@ -109,8 +110,6 @@
                 <div class="box-footer with-border">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                        <button type="button" class="btn btn-primary" onclick="PrintDiv('myDiv')">Print</button>
-                        <!-- <button type="submit" class="btn btn-danger">cancel</button>
-                         --><a href="{{route('report.index')}}" class="btn btn-danger">cancel</a>
                     </div>
                 </div>           
             </div>

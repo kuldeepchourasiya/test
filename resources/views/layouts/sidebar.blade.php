@@ -7,10 +7,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{url('images/'.Auth::user()->image)}}" class="img-circle" alt="User Image">
+          <img src="{{url('images/sys.jpeg')}}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p> Path-Lab</p>
+          <p>PATH-LAB</p>
           <!-- Status -->
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>

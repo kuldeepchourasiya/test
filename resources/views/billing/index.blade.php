@@ -8,13 +8,17 @@
       <p>{{ $message }}</p>
     </div>
     @endif
+    @if ($message = Session::get('danger'))
+    <div class="alert alert-danger">
+      <p>{{ $message }}</p>
+    </div>
+    @endif
     <div class='row'>
         <div class='col-md-12'>
             <!-- Box -->
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">Billing & Printing</h3>
-                    
                 </div>
                 <div class="box-body">
                     <table class="table table-bordered">
@@ -42,9 +46,9 @@
                             <td>{{$report->rpt_status}}</td>
                             <td>{{date('d-m-Y', strtotime($report->rpt_up_date))}}</td>
                             <td>
-                               <a href="" class="btn btn-info">Accept Payment</a>
+                                <a href="{{route('billing.edit',$report->rpt_id)}}" class="btn btn-info" >Accept Payment</a>
                                <a href="{{route('billing.show',$report->rpt_id)}}" class="btn btn-success">Invoice</a>
-                               <a href="" class="btn btn-primary"><i class="fa fa-download"></i>PDF</a>  
+                               <a href="{{url('/pdf/'.$report->rpt_id)}}" class="btn btn-primary"><i class="fa fa-download"></i>PDF</a>  
                             </td>
                             
                         </tr>
@@ -55,5 +59,4 @@
             </div>
         </div>
     </div>
-
 @endsection

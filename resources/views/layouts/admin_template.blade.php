@@ -171,29 +171,29 @@ desired effect
 <!-- Datatable  -->
 <script src="{{ asset ("bower_components/admin-lte/dist/js/jquery.dataTables.min.js") }}"></script>
 <script>
-    $('#test_report').change(function(){
+  $('#test_report').change(function(){
 
-    var id = $(this).val(); 
-    $.ajax({
-            url: '/get_by_category?id=' + $(this).val(), 
-            data:{id:id},  
-            success:function(data)
-            {
-              console.log(data,'data');
-              var res='';
-              $.each (data, function (key, value) {
-              res +=
-              '<tr>'+
-                  '<td>'+value.test_name+'</td>'+
-                  '<td>'+value.cat_name+'</td>'+
-                  '<td>'+value.test_charge+'</td>'+
-                  '<td>'+'<button class="btn btn-success" id='+ value.test_aid +' type="button" onclick=track('+ value.test_aid +','+ value.test_charge +','+ value.cat_aid +','+ value.test_aid +','+'"'+value.test_unit +'"'+') >+</button>'+'</td>'+
-             '</tr>'
+  var id = $(this).val(); 
+  $.ajax({
+          url: '/get_by_category?id=' + $(this).val(), 
+          data:{id:id},  
+          success:function(data)
+          {
+            console.log(data,'data');
+            var res='';
+            $.each (data, function (key, value) {
+            res +=
+            '<tr>'+
+                '<td>'+value.test_name+'</td>'+
+                '<td>'+value.cat_name+'</td>'+
+                '<td>'+value.test_charge+'</td>'+
+                '<td>'+'<button class="btn btn-success" id='+ value.test_aid +' type="button" onclick=track('+ value.test_aid +','+ value.test_charge +','+ value.cat_aid +','+ value.test_aid +','+'"'+value.test_unit +'"'+') >+</button>'+'</td>'+
+           '</tr>'
 
-              });
-              $('#city').html(res); 
-            }  
-        });  
+            });
+            $('#city').html(res); 
+          }  
+      });  
   }); 
 </script>
 <script>
@@ -202,7 +202,6 @@ desired effect
     var real_id = $('#rpt_id').val();
     $.ajax({
         url: '/report_test?id=',
-        
         data:{
           test_aid:test_aid,
           real_id:real_id,
@@ -211,7 +210,6 @@ desired effect
           test_aid : test_aid,
           test_unit:test_unit
         }, 
-        
         success:function(data)
         {
           console.log(data,'data');
@@ -246,7 +244,7 @@ desired effect
       $('#result').val(discont);
   });
 </script>
-<script type="text/javascript">
+<script>
   function PrintDiv(id) {
     var data=document.getElementById(id).innerHTML;
     var myWindow = window.open('', 'my div');
@@ -262,6 +260,9 @@ desired effect
     '}'+
     '.btn{' +
     'display:none;' +
+    '}'+
+    '.box-footer{' +
+    'margin-top:120px;'+
     '}'+
     '</style>';
     htmlToPrint += data;

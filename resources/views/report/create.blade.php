@@ -27,7 +27,7 @@
                     <h3 class="box-title">New Report Registration</h3>
                     <div class="pull-right">
                       <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('report.index') }}"> <i class="fa fa-undo"></i></a>
+                        <a class="btn close" href="{{ route('report.index') }}"> <span aria-hidden="true">×</span></a>
                       </div>
                     </div>
                 </div>

@@ -85,7 +85,7 @@ class ReportController extends Controller
     public function store(Request $request)
     {	
     	$this->validate($request, [
-            'pnt_mobile' => 'required|digits:10',
+            'pnt_mobile' => 'required|Max:10',
             
         ]);
     	$patient_uhid   = DB::table('id_number')

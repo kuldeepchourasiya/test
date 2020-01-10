@@ -27,7 +27,7 @@ Route::get('/sample_proceed/{id}', 'SampleCollectController@report_proceed');
 Route::get('/proceed_doctor/{id}', 'AssignDoctorController@proceed_doctor');
 Route::get('/smpl_tst_proceed/{id}', 'SampleTestingController@report_proceed');
 Route::get('/rpt_cmplt_proceed/{id}', 'ReportCompleteController@proceed_billing');
-
+Route::get('/pdf/{id}', 'BillingController@pdf');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('test','TestController');

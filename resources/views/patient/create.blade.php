@@ -44,7 +44,7 @@
                             <div class="col-xs-6 col-sm-6 col-md-6">
                                 <div class="form-group">
                                     <strong>Mobile:</strong>
-                                   {!! Form::text('pnt_mobile', null, array('placeholder' => 'PATIENTMOBILE','class' => 'form-control')) !!}
+                                   {!! Form::text('pnt_mobile', null, array('placeholder' => 'PATIENTMOBILE','class' => 'form-control','min' =>'0')) !!}
                                 </div>
                             </div>
                             <div class="col-xs-6 col-sm-6 col-md-6">

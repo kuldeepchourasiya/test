@@ -43,12 +43,12 @@ class AssignDoctorController extends Controller
 
    public function proceed_doctor($id)
    {
-		$rpt_status = "APPROVAL STAGE";
-		DB::table('reports')
-	    	->where('rpt_id',$id)
-	    	->update(['rpt_status'=>$rpt_status]);
+  		$rpt_status = "APPROVAL STAGE";
+  		DB::table('reports')
+  	    	->where('rpt_id',$id)
+  	    	->update(['rpt_status'=>$rpt_status]);
 
-		return redirect()->route('assign_doctor.index')
-	           ->with('success','Reports Proceed for completed successfully');
+  		return redirect()->route('assign_doctor.index')
+  	           ->with('success','Reports Proceed for completed successfully');
    }
 }

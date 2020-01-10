@@ -7,6 +7,7 @@
             <div class="box box-primary" >
                 <div class="box-header with-border text-center">
                     <h1 class="box-title" style="font-size:25px;">Receipt</h1>
+                    <a href="{{route('billing.index')}}" class="btn close"><span aria-hidden="true">&times;</span></a>
                 </div>
                 <div class="box-body" >
                     <div class="row">
@@ -74,7 +75,7 @@
                                     <th>Test Name</th>
                                     <th>Test Value</th>
                                     <th>Test Unit</th>
-                                    <th>Test Charge</th>
+                                    <!-- <th>Test Charge</th> -->
                                 </tr>
                                 <tbody>
                                     @foreach($record_test as $test)
@@ -82,7 +83,7 @@
                                         <td>{{$test->test_name}}</td>
                                         <td>{{$test->r_test_val}}</td>
                                         <td>{{$test->test_unit}}</td>
-                                        <td>{{$test->test_charge}}</td>
+                                        <!-- <td>{{$test->test_charge}}</td> -->
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -101,21 +102,20 @@
                                     </div></td>
                                     
                                 </tr>
-                               
                             </table>
-                            
                         </div>
                     </div>
-                </div>
-                <div class="box-footer with-border text-center" style="margin-top:100px;">
-                    <h5 class="col-xs-3 col-sm-3 col-md-3 pull-left" ">Signature</h5>
-                    <!-- <h5 class="col-xs-3 col-sm-3 col-md-3 pull-right" ">Signature</h5> -->
+                    <div class="row">
+                        <div class="box-body" >
+                            <div class="box-footer with-border text-center">
+                            <h5 class="col-xs-3 col-sm-3 col-md-3 pull-right">Signature</h5>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="box-footer with-border">
                     <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                        <button type="button" class="btn btn-primary" onclick="PrintDiv('myDiv')">Print</button>
-                        <!-- <button type="submit" class="btn btn-danger">cancel</button>
-                         --><a href="{{route('billing.index')}}" class="btn btn-danger">cancel</a>
                     </div>
                 </div>           
             </div>

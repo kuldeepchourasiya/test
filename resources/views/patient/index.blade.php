@@ -16,8 +16,7 @@
                     <h3 class="box-title">Patient List</h3>
                     <div class="pull-right">
                       <div class="pull-right">
-                       
-                        <a class="btn btn-success" href="{{route ('patient.create')}}">+</a>
+                       <!--   <a class="btn btn-success" href="{{route ('patient.create')}}">+</a> -->
                         
                       </div>
                     </div>

@@ -22,7 +22,7 @@
                     <h3 class="box-title">Edit Report</h3>
                     <div class="pull-right">
                       <div class="pull-right">
-                        <a class="btn btn-primary" href="{{ route('report.index') }}"> <i class="fa fa-reply"></i></a>
+                        <a class="btn close" href="{{ route('report.index') }}"> <span aria-hidden="true">×</span></a>
                       </div>
                     </div>
                 </div>

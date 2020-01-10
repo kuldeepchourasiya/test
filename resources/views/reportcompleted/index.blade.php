@@ -8,6 +8,11 @@
       <p>{{ $message }}</p>
     </div>
     @endif
+    @if ($message = Session::get('danger'))
+    <div class="alert alert-danger">
+      <p>{{ $message }}</p>
+    </div>
+    @endif
     <div class='row'>
         <div class='col-md-12'>
             <!-- Box -->
@@ -42,7 +47,8 @@
                             <td>{{$report->rpt_status}}</td>
                             <td>{{date('d-m-Y', strtotime($report->rpt_up_date))}}</td>
                             <td>
-                               <a href="{{url('/rpt_cmplt_proceed/'.$report->rpt_id)}}" class="btn btn-success">Billing</a>  
+                                <a href="{{route('report_complete.edit',$report->rpt_id)}}" class="btn btn-primary">Approved</a>
+                                <a href="{{url('/rpt_cmplt_proceed/'.$report->rpt_id)}}" class="btn btn-success">Billing</a>  
                             </td>
                             
                         </tr>
